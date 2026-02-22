@@ -8,12 +8,14 @@ public class Main {
         int choice;
 
         do {
-            System.out.println("\n===== TO-DO LIST MENU =====");
-            System.out.println("1. Add Task");
-            System.out.println("2. View Tasks");
-            System.out.println("3. Mark Task as Completed");
-            System.out.println("4. Delete Task");
-            System.out.println("5. Exit");
+            System.out.println("=============================");
+            System.out.println("| TO-DO LIST MENU           |");
+            System.out.println("| 1) Add Task               |");
+            System.out.println("| 2) View Tasks             |");
+            System.out.println("| 3) Mark Task as Completed |");
+            System.out.println("| 4) Delete Task            |");
+            System.out.println("| 5) Exit                   |");
+            System.out.println("=============================");
             System.out.print("Enter your choice: ");
 
             choice = scanner.nextInt();
