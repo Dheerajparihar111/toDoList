@@ -1,13 +1,57 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-void main() {
-  //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-  // to see how IntelliJ IDEA suggests fixing it.
-  IO.println(String.format("Hello and welcome!"));
+import java.util.Scanner;
 
-  for (int i = 1; i <= 5; i++) {
-    //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-    // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-    IO.println("i = " + i);
-  }
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        TodoManager manager = new TodoManager();
+        int choice;
+
+        do {
+            System.out.println("\n===== TO-DO LIST MENU =====");
+            System.out.println("1. Add Task");
+            System.out.println("2. View Tasks");
+            System.out.println("3. Mark Task as Completed");
+            System.out.println("4. Delete Task");
+            System.out.println("5. Exit");
+            System.out.print("Enter your choice: ");
+
+            choice = scanner.nextInt();
+            scanner.nextLine();
+
+            switch (choice) {
+                case 1:
+                    System.out.print("Enter task title: ");
+                    String title = scanner.nextLine();
+                    manager.addTask(title);
+                    break;
+
+                case 2:
+                    manager.viewTasks();
+                    break;
+
+                case 3:
+                    System.out.print("Enter task number to mark complete: ");
+                    int completeIndex = scanner.nextInt() - 1;
+                    manager.markTaskCompleted(completeIndex);
+                    break;
+
+                case 4:
+                    System.out.print("Enter task number to delete: ");
+                    int deleteIndex = scanner.nextInt() - 1;
+                    manager.deleteTask(deleteIndex);
+                    break;
+
+                case 5:
+                    System.out.println("Exiting... Goodbye!");
+                    break;
+
+                default:
+                    System.out.println("Invalid choice. Try again.");
+            }
+
+        } while (choice != 5);
+
+        scanner.close();
+    }
 }
