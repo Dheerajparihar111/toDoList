@@ -64,7 +64,7 @@ Users can select a number to perform the corresponding operation.
 ### 1️⃣ Clone the Repository
 
 ```
-git clone https://github.com/your-username/todo-list-java-cli.git
+git clone 
 ```
 
 ---
@@ -118,7 +118,9 @@ Completed tasks will appear like:
 [✔] Complete Java project
 ```
 
----
+<img width="1917" height="1017" alt="to-do-list output 1" src="https://github.com/user-attachments/assets/eefd756f-6561-41b0-b413-fed7ed2a775a" />
+
+<img width="1915" height="1023" alt="to-do-list output 2" src="https://github.com/user-attachments/assets/4eba2fdf-8e5f-4abc-ba81-67a74b5da8e7" />
 
 # 🧠 OOP Concepts Implemented
 
